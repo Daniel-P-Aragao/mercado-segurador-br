@@ -1,0 +1,23 @@
+cogrupo_ramo,nome_grupo,segmento
+1,Patrimonial,Patrimonial
+2,Riscos Especiais (run off),Grandes Riscos
+3,Responsabilidades,Responsabilidades
+4,Cascos (run off),Grandes Riscos
+5,Automóvel,Automóvel
+6,Transportes,Transportes
+7,Riscos Financeiros,Riscos Financeiros e Crédito
+8,Crédito,Riscos Financeiros e Crédito
+9,Pessoas Coletivo,Pessoas
+10,Habitacional,Habitacional
+11,Rural,Rural
+12,Outros,Outros
+13,Pessoas Individual,Pessoas
+14,Marítimos,Grandes Riscos
+15,Aeronáuticos,Grandes Riscos
+16,Microsseguros,Outros
+17,Riscos de Petróleo,Grandes Riscos
+18,Riscos Nucleares,Grandes Riscos
+19,Saúde Resseguro,Outros
+20,Aceitações do Exterior,Outros
+21,Sucursal no Exterior,Outros
+22,Previdência e Vida EFPC,Outros

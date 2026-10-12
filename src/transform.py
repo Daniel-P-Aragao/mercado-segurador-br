@@ -3,7 +3,7 @@ import logging
 
 import pandas as pd
 
-from config import PROCESSED_DIR, RAW_DIR
+from config import PROCESSED_DIR, RAW_DIR, SEEDS_DIR
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(message)s")
 log = logging.getLogger(__name__)
@@ -48,7 +48,14 @@ def limpar_cias() -> pd.DataFrame:
 def limpar_ramos() -> pd.DataFrame:
     ramos = pd.read_csv(RAW_DIR / "Ses_ramos.csv", **LEITURA)
     ramos["noramo"] = ramos["noramo"].str.replace(r"^\d+\s*-\s*", "", regex=True).str.strip()
-    ramos["cogrupo_ramo"] = ramos["coramo"] // 100  # 2 primeiros dígitos do código
+    ramos["cogrupo_ramo"] = ramos["coramo"] // 100
+
+    segmentos = pd.read_csv(SEEDS_DIR / "segmentos_ramos.csv")
+    ramos = ramos.merge(segmentos, on="cogrupo_ramo", how="left", validate="many_to_one")
+
+    sem_segmento = sorted(ramos.loc[ramos["segmento"].isna(), "cogrupo_ramo"].unique())
+    if sem_segmento:
+        raise ValueError(f"Grupos sem segmento no seed: {sem_segmento}")
     return ramos
 
 
