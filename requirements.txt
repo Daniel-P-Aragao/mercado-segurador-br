@@ -1,0 +1,5 @@
+pandas
+requests
+pyarrow
+google-cloud-bigquery
+pandas-gbq

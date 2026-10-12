@@ -218,3 +218,17 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Dados e segredos: nunca vão para o Git
+data/
+.env
+.env.*
+!.env.example
+credentials/
+*service-account*.json
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
