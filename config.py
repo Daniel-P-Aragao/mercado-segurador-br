@@ -14,3 +14,4 @@ SES_URL = "https://www2.susep.gov.br/redarq.asp?arq=BaseCompleta%2ezip"
 
 GCP_PROJECT = os.getenv("GCP_PROJECT", "")
 BQ_DATASET = "susep"
+BQ_DATASET_MARTS = "susep_marts"
