@@ -3,3 +3,4 @@ requests
 pyarrow
 google-cloud-bigquery
 pandas-gbq
+python-dotenv
