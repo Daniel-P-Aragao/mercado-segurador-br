@@ -127,7 +127,7 @@ Power BI
 **Pré-requisitos:** Python 3.10+, Git e um projeto no Google Cloud com BigQuery (o Sandbox gratuito é suficiente).
 
 ```bash
-git clone https://github.com/SEU_USUARIO/mercado-segurador-br.git
+git clone https://github.com/Daniel-P-Aragao/mercado-segurador-br.git
 cd mercado-segurador-br
 
 python -m venv .venv
